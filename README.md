@@ -1,2 +1,2 @@
 # lolchangil.github.io
-lolchangil bog
+롤창일생 블로그
